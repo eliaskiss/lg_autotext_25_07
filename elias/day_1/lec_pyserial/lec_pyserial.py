@@ -1,5 +1,3 @@
-from pickletools import read_unicodestringnl
-
 import serial
 from icecream import ic
 import time
@@ -88,10 +86,13 @@ def closePort(ser):
 
 if __name__ == '__main__':
     # 포트열기
-    ser = openPort(port='com2')
+    ser = openPort(port='com1')
+
+    # time.sleep(5)
 
     # 포트쓰기
-    # data = 'HelloWorld\r\n'
+    data = 'HelloWorld\r\n'
+    # writePort(ser, data)
     # ic(writePort(ser, data.encode())) # unicode --> bytes array
     # ic(writePortUnicode(ser, data))
 
@@ -106,7 +107,7 @@ if __name__ == '__main__':
     # ic(readLine(ser))
 
     # Ctrl + C가 들어올때까지 read
-    # ic(readUntilExitCode(ser))
+    ic(readUntilExitCode(ser))
 
     closePort(ser)
 
