@@ -19,7 +19,7 @@ ic.configureOutput(includeContext=True)
 
 def main():
     ser = Serial()
-    ser.openSerial('com1')
+    ser.openPort('com1')
 
     ic('Echo Server is running...')
 
@@ -48,5 +48,5 @@ def main():
 
     ser.closePort()
 
-    if __name__ == '__main__':
-        main()
+if __name__ == '__main__':
+    main()

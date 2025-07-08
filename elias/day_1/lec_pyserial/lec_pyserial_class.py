@@ -5,7 +5,7 @@ from icecream import ic
 import time
 
 ic.configureOutput(includeContext=True)
-ic.disable()
+# ic.disable()
 
 class Serial:
     def __init__(self):
